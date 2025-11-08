@@ -34,19 +34,18 @@ canvas {
 
 /* الشريط العلوي */
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
-  display: flex;
+  display: flex; /* غيرنا من none إلى flex */
   justify-content: space-between;
   align-items: center;
   padding: 15px 80px;
-  background: rgba(12, 0, 30, 0.168); /* خلفية شفافة */
-  backdrop-filter: blur(10px); /* تأثير الزجاج */
-  box-shadow: 0 0 15px  #b9a3f8;
-  z-index: 10;
+  background: rgba(12, 0, 30, 0.168);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px #b9a3f8;
+  z-index: 999;
   border-bottom: 1px solid rgba(180, 81, 202, 0.427);
-    
 }
 
 #cyber {
@@ -106,16 +105,16 @@ canvas {
   position: relative;     /* لازم عشان right تشتغل */
   text-align: right;
   color: #dfd5ff;
-  font-size: 30px;
-  line-height: 3.2;
-  margin-top: -90px;
+  font-size: 28px;
+  line-height: 3.7;
+  margin-top: -200px;
   right: 50px;            /* تحركه شوي عن الحافة اليمنى */
 }
   .bottom-left {
   position: fixed;       /* ثابت بالنسبة للنافذة */
-  bottom: -120px;          /* مسافة من الأسفل */
-  left: 40px;            /* مسافة من اليسار */
-  width: 600px;          /* حجم الصورة */
+  bottom: -100px;          /* مسافة من الأسفل */
+  left: -20px;            /* مسافة من اليسار */
+  width: 500px;          /* حجم الصورة */
   height: auto;          /* للحفاظ على النسبة */
   z-index: 0;            /* تحت النصوص */
   pointer-events: none;  /* النصوص والأزرار فوقها تظل قابلة للنقر */
@@ -127,9 +126,9 @@ canvas {
 .edu{
   color: #dfd5ff;
   position:relative;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 2.5;
-  margin-top: -110px;
+  margin-top: -180px;
   
 
 }
@@ -170,33 +169,50 @@ canvas {
 .skl{
   color: #dfd5ff;
   position:relative;
-  font-size: 18px;
-  margin-top: -110px;
+  font-size: 20px;
+  margin-top: -170px;
 
 }
+/* قسم المهارات */
 .skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* كل شيء في المنتصف */
+  gap: 30px;
   text-align: center;
+  margin-top: 50px;
   color: #dfd5ff;
-  margin-top: 100px;
 }
 
 .skills-section h2 {
-  font-size: 30px;
-  margin-bottom: 40px;
+  font-size: 32px;
+  color: #dfd5ff;
   text-shadow: 0 0 10px rgba(180,81,202,0.5);
-  margin-top: -60px
+  margin-bottom: 40px;
+  margin-bottom: -20px; /* قلل الهامش السفلي */
+  line-height: 1.2;
 }
 
+/* حاوية المهارات التقنية */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* كل الكروت في الوسط */
   gap: 40px;
 }
 
+/* حاوية المهارات الشخصية */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* كل الكروت في الوسط */
+  gap: 30px;
+}
+
+/* تصميم الكروت */
 .skill-card {
-  width: 120px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   background: rgba(30, 0, 60, 0.6);
   border-radius: 15px;
   border: 2px solid rgba(180,81,202,0.4);
@@ -206,6 +222,8 @@ canvas {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  text-align: center;
+  
 }
 
 .skill-card:hover {
@@ -216,15 +234,18 @@ canvas {
 .skill-card img {
   width: 50px;
   height: 50px;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
 .skill-card p {
   font-size: 16px;
-  color: #fff;
+  font-weight: 600;
+  color: #4a0ca3;
+  line-height: 1.2; /* قلل المسافة بين السطور */
+  margin: 0;  
+ 
 }
-
-
 
 
 
