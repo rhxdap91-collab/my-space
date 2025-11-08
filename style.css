@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background: radial-gradient(circle at center, #08001a, #000);
+overflow: hidden;
+font-family: 'Changa', 'Press Start 2P', sans-serif;
+  
+   
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+
+
+.main {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+}
+
+
+
+/* الشريط العلوي */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background: rgba(12, 0, 30, 0.168); /* خلفية شفافة */
+  backdrop-filter: blur(10px); /* تأثير الزجاج */
+  box-shadow: 0 0 15px  #b9a3f8;
+  z-index: 10;
+  border-bottom: 1px solid rgba(180, 81, 202, 0.427);
+    
+}
+
+#cyber {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0; /* خلف كل شيء */
+}
+
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  color: #b9a3f8;
+  font-size: 35px;
+  text-shadow: 0 0 12px rgba(180, 81, 202, 0.6);
+  font-weight: bolder;
+ 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    margin:0;
+    
+
+
+    
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration:none;
+    font-size: 27px;
+    transition: 0.3s;
+    position: relative;
+    font-weight:10px;
+ 
+}
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #b9a3f8;
+  transition: width 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #b9a3f8;
+}
+.menu ul li a:hover::after {
+  width: 100%;
+}
+.name {
+  position: relative;     /* لازم عشان right تشتغل */
+  text-align: right;
+  color: #dfd5ff;
+  font-size: 30px;
+  line-height: 3.2;
+  margin-top: -90px;
+  right: 50px;            /* تحركه شوي عن الحافة اليمنى */
+}
+  .bottom-left {
+  position: fixed;       /* ثابت بالنسبة للنافذة */
+  bottom: -120px;          /* مسافة من الأسفل */
+  left: 40px;            /* مسافة من اليسار */
+  width: 600px;          /* حجم الصورة */
+  height: auto;          /* للحفاظ على النسبة */
+  z-index: 0;            /* تحت النصوص */
+  pointer-events: none;  /* النصوص والأزرار فوقها تظل قابلة للنقر */
+  image-rendering: auto;   /* تحسين العرض */
+  image-rendering: crisp-edges; /* يعطي حدة لو الصورة Pixel art */
+  image-rendering: smooth; /
+ 
+}
+.edu{
+  color: #dfd5ff;
+  position:relative;
+  font-size: 20px;
+  line-height: 2.5;
+  margin-top: -110px;
+  
+
+}
+.certificate-box {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 20px auto;
+  margin-top: 65px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(180,81,202,0.4);
+  border: 2px solid rgba(180,81,202,0.3);
+  background: rgba(30, 0, 60, 0.6); /* خلفية شبه شفافة */
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+}
+
+.certificate-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(180,81,202,0.6);
+}
+
+.certificate-header {
+  text-align: center;
+  background: linear-gradient(135deg, #6a0dad, #b451ca);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.certificate-box iframe {
+  width: 100%;
+  height: calc(100% - 50px); 
+  border: none;
+}
+.skl{
+  color: #dfd5ff;
+  position:relative;
+  font-size: 18px;
+  margin-top: -110px;
+
+}
+.skills-section {
+  text-align: center;
+  color: #dfd5ff;
+  margin-top: 100px;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(180,81,202,0.5);
+  margin-top: -60px
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.skill-card {
+  width: 120px;
+  height: 130px;
+  background: rgba(30, 0, 60, 0.6);
+  border-radius: 15px;
+  border: 2px solid rgba(180,81,202,0.4);
+  box-shadow: 0 5px 20px rgba(180,81,202,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(180,81,202,0.7);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
