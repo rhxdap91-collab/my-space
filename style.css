@@ -308,7 +308,7 @@ body {
 /* النصوص داخل الكروت */
 .project-card p, .project-card ul {
     font-size: 20px;
-    line-height: 2.9;
+    line-height: 2.7;
     text-align:right;
 }
 
@@ -334,12 +334,12 @@ body {
 .contact-header h1 {
     font-size: 48px;
     color:#b9a3f8;
-    margin-top: -250px;
+    margin-top: -267px;
 }
 
 .contact-header p {
     font-size: 25px;
-    margin-top: 2px;
+    margin-top: -7px;
     color:#ffffff ;
 }
 

@@ -16,33 +16,31 @@
 <canvas id="cyber"></canvas>
  <div class="main">
 <div class="contact-main">
-    <div class="contact-header">
+    <div class="contact-header" dir="rtl">
         <h1>تواصل معي</h1>
-        <p>هل لديك سؤال أو اقتراح؟ أرسل رسالة أو تواصل معي عبر وسائل التواصل الاجتماعي.</p>
+        <p>لو أعجبك المشروع، لا تتردد بمشاركة رأيك معنا! سواء كانت أفكار، اقتراحات، أو مجرد كلمة تشجيع، يسعدني سماعها والتواصل معك عبر وسائل التواصل الاجتماعي.</p>
+
     </div>
 
     <div class="contact-wrapper">
 
-        <!-- نموذج التواصل -->
-        <div class="contact-form">
-            <h2>أرسل رسالة</h2>
-            <form>
-                <input type="text" placeholder="اسمك" required>
-                <input type="email" placeholder="البريد الإلكتروني" required>
-                <textarea placeholder="رسالتك" rows="5" required></textarea>
-                <button type="submit">إرسال</button>
-            </form>
-        </div>
-
+      <div class="contact-form">
+    <h2>أرسل رسالة</h2>
+    <form action="https://formspree.io/f/movyagar" method="POST">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+</div>
         <!-- أيقونات التواصل -->
         <div class="contact-social">
             <h2>تواصل عبر</h2>
             <div class="social-links">
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-                <a href="https://wa.me/رقمك" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                <a href="https://x.com/MySpace649957"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X"></a>
+                <a href="https://www.linkedin.com/in/farah-bajandouh-268603336/?skipRedirect=true"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/myspace845/"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+                <a href="https://wa.me/966566814137" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
             </div>
         </div>
@@ -51,6 +49,7 @@
 </div>
 
   </div>
+  
      
     
 </body>
