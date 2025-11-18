@@ -339,8 +339,8 @@ body {
 }
 
 .contact-header p {
-    font-size: 20px;
-    margin-top: -5px;
+    font-size: 25px;
+    margin-top: 2px;
     color:#ffffff ;
 }
 
@@ -363,7 +363,7 @@ body {
     width: 700px;
     box-shadow: 0 0 20px rgba(180,81,202,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: -270px;
+    margin-top: -200px;
     height: 400x;
 }
 
