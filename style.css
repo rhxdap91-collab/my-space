@@ -175,7 +175,7 @@ body {
   z-index: -1;          /* خلف المحتوى */
   transform: scaleX(-1);
 }
-.aboutme{
+.header1{
   position: relative;
   top: -130px;         /* مسافة من الأعلى */
   right: 30px;       /* مسافة من اليمين */
@@ -280,16 +280,6 @@ body {
 .btn:hover {
   background-color:#ffea0158;
 }
-.edu-header {
- position: relative;
-  top: -130px;         /* مسافة من الأعلى */
-  right: 30px;       /* مسافة من اليمين */
-  text-align: right; /* النص يمين */
-  color: #ffffff;    /* غيري اللون إذا لزم */
-  font-size: 28px;   /* حجم مناسب */
-  line-height: 1.8;
-  text-shadow: 0px 12px 12px rgb(0, 0, 0);
-}
 
 .education-box {
   padding: 25px 35px;
@@ -384,16 +374,6 @@ body {
 .visit-btn:hover {
   background: #007fc4a6;
 }
-.skills-header{
-  position: relative;
-  top: -130px;         /* مسافة من الأعلى */
-  right: 30px;       /* مسافة من اليمين */
-  text-align: right; /* النص يمين */
-  color: #ffffff;    /* غيري اللون إذا لزم */
-  font-size: 28px;   /* حجم مناسب */
-  line-height: 1.8;
-  text-shadow: 0px 12px 12px rgb(0, 0, 0);
-}
 
 .skills-box {
   padding: 25px 35px;
@@ -439,214 +419,98 @@ body {
   text-shadow: 0px 2px 2px rgb(44, 109, 158);
 }
 
-/* Header */
-.contact-header {
-    text-align: center;
-    padding: 60px 20px;
+/* البوكس الأساسي */
+.contact-box {
+  border:3px double rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  width: 70%;
+  margin: 90px auto 180px auto;
+  backdrop-filter: blur(3px);
 }
 
-.contact-header h1 {
-    font-size: 30px;
-    color:#b9a3f8;
-    margin-top: -250px;
-}
-
-.contact-header p {
-    font-size: 25px;
-    margin-top: 2px;
-    color:#ffffff ;
-}
-
-/* Wrapper - تقسيم الصفحة */
-.contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 180px;
-    padding: 60px 20px;
-    flex-wrap: wrap;
-}
-
-/* Form */
 .contact-form {
-    background: #1a1a1a;
-    border: 2px solid rgba(180,81,202,0.4);
-    border-radius: 20px;
-    padding: 40px;
-    width: 700px;
-    box-shadow: 0 0 20px rgba(180,81,202,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: -200px;
-    height: 400x;
-}
-
-.contact-form:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 40px rgba(180,81,202,0.7);
+  flex: 1;
 }
 
 .contact-form h2 {
-    color:#ffffff;
-    margin-bottom: 15px;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgb(44, 109, 158);
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(180,81,202,0.4);
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 16px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #152044;
+  color: #fff;
 }
 
-form input::placeholder, form textarea::placeholder {
-    color: #ffffff;
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #009cf6;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow:
+    0px 10px 0px #000,        
+    0px 10px 25px rgba(0,0,0,0.4); 
+
+   
 }
 
-form button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: #59237a;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
+.contact-form button:hover {
+  background: #007bbb;
 }
 
-form button:hover {
-    background: #b9a3f8;
-}
-
-/* Social */
+/* أيقونات التواصل */
 .contact-social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    gap: 20px;
+  flex: 0.8;
 }
 
 .contact-social h2 {
-    color: #ffffff;
-    font-size: 29px;
+  font-size: 35px;
+  margin-bottom:20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgb(44, 109, 158);
 }
 
 .social-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  justify-content: center; 
+   align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .social-links img {
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(0 0 2px #b9a3f8);
-    transition: transform 0.3s, filter 0.3s;
+  width: 40px;
+  height: 40px;
+  transition: 0.25s;
+  filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.5));
+
 }
 
 .social-links img:hover {
-    transform: scale(1.3);
-    filter: drop-shadow(0 0 20px #ffffff);
+  transform: scale(1.15);
+ 
+  
 }
-
-/* Responsive */
-@media screen and (max-width: 900px) {
-    .contact-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-social {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-    }
-}
-.course-card {
-    background: #1a1a1a;
-    border: 2px solid rgba(180,81,202,0.4);
-    border-radius: 20px;
-    padding: 30px;
-    width: 300px;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(180,81,202,0.3);
-   margin-top: -420px;
-    font-family: 'Changa', sans-serif;
-    margin-left: 470px;
-    height: 400px;
-  }
-   
-
-.course-card h3 {
-    color: #b9a3f8;
-    margin-bottom: 10px;
-}
-
-.course-card p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.course-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #59237a;
-    color: #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.course-card a:hover {
-    background: #b9a3f8;
-}
-.course-cards {
-   background: #1a1a1a;
-    border: 2px solid rgba(180,81,202,0.4);
-    border-radius: 20px;
-    padding: 30px;
-    width: 300px;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(180,81,202,0.3);
-   margin-top: -400px;
-    font-family: 'Changa', sans-serif;
-    margin-left: 80px;
-    height: 400px;
-  }
-   
-
-
-.course-cards h3 {
-    color: #b9a3f8;
-    margin-bottom: 10px;
-}
-
-.course-cards p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.course-cards a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #59237a;
-    color: #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.course-cards a:hover {
-    background: #b9a3f8;
-}
-
-
-
 
 
 
